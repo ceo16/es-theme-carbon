@@ -6,7 +6,7 @@
     <corners ifSubset="tileborders:no">0</corners>
     <cornersOfMedias>12</cornersOfMedias>
     <cornersOfMedias ifSubset="tileborders:no">0</cornersOfMedias>
-    <simpleMode>${system.name} == "retrobat"</simpleMode>
+    <simpleMode>${system.name} == "lumaca"</simpleMode>
     <favoriteSystem>${system.name} == "favorites"</favoriteSystem>
     <borderFrame>./../art/framewsel.png</borderFrame>
     <borderFrame ifSubset="tileborders:no">./../art/framewselsq.png</borderFrame>
