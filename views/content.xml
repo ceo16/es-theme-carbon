@@ -341,6 +341,15 @@
                       <opacity>{game:favorite} ? 1 : 0.2</opacity>
                       <color>FFFFFFFF</color>
                     </image>
+                    <image name="downloadIcon">
+                     <visible>{game:extension} == '.download'</visible>
+                     <path>./../art/icons/download_overlay.svg</path>
+                     <pos>0 0</pos>
+                     <origin>0 0</origin>
+                     <maxSize>1 1</maxSize>
+                     <horizontalAlignment>right</horizontalAlignment>
+                     <color>FFFFFFFF</color>
+                     </image>
                     <image if="${system.cheevos}">
                       <visible>{game:cheevos} &amp;&amp; {system:showCheevos}</visible>
                       <path>./../resources/fontoverrides/F091.png</path>
