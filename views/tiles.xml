@@ -76,6 +76,13 @@
       <singleLineScroll>false</singleLineScroll>
       <color>FFFFFF</color>
     </text>
+    	<image name="gridtile.download">
+    <path>./art/icons/download_overlay.svg</path>
+      <pos>0.1 0.1</pos>
+      <maxSize>0.15 0.15</maxSize>
+      <origin>0.5 0.5</origin>
+      <horizontalAlignment>right</horizontalAlignment>
+      <color>FFFF00A0</color>
     <image name="gridtile.favorite">
       <path>./art/favorite.png</path>
       <pos>0.93 0.07</pos>
