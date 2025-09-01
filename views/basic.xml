@@ -79,82 +79,92 @@ originally based on: "simple" by nils bonenberger
             <animation property="color" to="transparent"/>
           </storyboard>
           <container>
-            <padding>6 0</padding>
-            <text name="nameId" pos="0 0" size="0.5 1">
-              <text>{grid:label}</text>
-              <!--
-              <glowColor>000000A0</glowColor>
-              <glowSize ifArch="windows,x86,x86_64,odroidc4,odroidxu4">1</glowSize>
-              -->
-              <extraTextColor>606060</extraTextColor>
-              <verticalAlignment>center</verticalAlignment>
-              <fontPath>./../art/fonts/Cabin-Regular.ttf</fontPath>
-              <multiLine>false</multiLine>
-              <autoScrollDelay>250</autoScrollDelay>
-              <fontSize>0.026</fontSize>
-              <fontSize ifSubset="optimizesmallscreens:yes">0.034</fontSize>
-              <color>C0C0C0</color>
-              <storyboard event="activate">
+    <padding>6 0</padding>
+    <stackpanel orientation="horizontal">
+        <separator>8</separator> <image name="downloadIcon_list">
+            <path>./../art/icons/download_overlay.svg</path>
+            <maxSize>0.022 0.8</maxSize>
+            <origin>0 0.5</origin>
+            <pos>0 0.5</pos>
+            <color>FFFFFFFF</color>
+            <visible>{game:extension} == '.download'</visible>
+        </image>
+
+        <text name="nameId" pos="0 0" size="0.5 1">
+            <text>{grid:label}</text>
+            <extraTextColor>606060</extraTextColor>
+            <verticalAlignment>center</verticalAlignment>
+            <fontPath>./../art/fonts/Cabin-Regular.ttf</fontPath>
+            <multiLine>false</multiLine>
+            <autoScrollDelay>250</autoScrollDelay>
+            <fontSize>0.026</fontSize>
+            <fontSize ifSubset="optimizesmallscreens:yes">0.034</fontSize>
+            <color>C0C0C0</color>
+            <storyboard event="activate">
                 <animation property="color" to="FFFFFFFF"/>
                 <animation property="singleLineScroll" to="true"/>
-              </storyboard>
-              <storyboard event="deactivate">
+            </storyboard>
+            <storyboard event="deactivate">
                 <animation property="color" to="C0C0C0"/>
                 <animation property="singleLineScroll" to="false"/>
-              </storyboard>
-            </text>
-            <text name="genreId" pos="0.5 0" size="0.2 1">
-              <text>{game:genre}</text>
-              <verticalAlignment>center</verticalAlignment>
-              <alignment>left</alignment>
-              <fontPath>./../art/fonts/Cabin-Regular.ttf</fontPath>
-              <fontSize>0.016</fontSize>
-              <fontSize ifSubset="optimizesmallscreens:yes">0.021</fontSize>
-              <color>A0A0A0</color>
-              <multiLine>false</multiLine>
-              <autoScrollDelay>250</autoScrollDelay>
-              <storyboard event="activate">
+            </storyboard>
+        </text>
+
+        <text name="genreId" pos="0.5 0" size="0.2 1">
+            <text>{game:genre}</text>
+            <verticalAlignment>center</verticalAlignment>
+            <alignment>left</alignment>
+            <fontPath>./../art/fonts/Cabin-Regular.ttf</fontPath>
+            <fontSize>0.016</fontSize>
+            <fontSize ifSubset="optimizesmallscreens:yes">0.021</fontSize>
+            <color>A0A0A0</color>
+            <multiLine>false</multiLine>
+            <autoScrollDelay>250</autoScrollDelay>
+            <storyboard event="activate">
                 <animation property="singleLineScroll" to="true"/>
-              </storyboard>
-              <storyboard event="deactivate">
+            </storyboard>
+            <storyboard event="deactivate">
                 <animation property="singleLineScroll" to="false"/>
-              </storyboard>
-            </text>
-            <text name="publisherId" pos="0.7 0" size="0.2 1">
-              <text>{game:publisher}</text>
-              <verticalAlignment>center</verticalAlignment>
-              <alignment>left</alignment>
-              <fontPath>./../art/fonts/Cabin-Regular.ttf</fontPath>
-              <fontSize>0.016</fontSize>
-              <fontSize ifSubset="optimizesmallscreens:yes">0.021</fontSize>
-              <color>A0A0A0</color>
-              <multiLine>false</multiLine>
-              <autoScrollDelay>250</autoScrollDelay>
-              <storyboard event="activate">
+            </storyboard>
+        </text>
+
+        <text name="publisherId" pos="0.7 0" size="0.2 1">
+            <text>{game:publisher}</text>
+            <verticalAlignment>center</verticalAlignment>
+            <alignment>left</alignment>
+            <fontPath>./../art/fonts/Cabin-Regular.ttf</fontPath>
+            <fontSize>0.016</fontSize>
+            <fontSize ifSubset="optimizesmallscreens:yes">0.021</fontSize>
+            <color>A0A0A0</color>
+            <multiLine>false</multiLine>
+            <autoScrollDelay>250</autoScrollDelay>
+            <storyboard event="activate">
                 <animation property="singleLineScroll" to="true"/>
-              </storyboard>
-              <storyboard event="deactivate">
+            </storyboard>
+            <storyboard event="deactivate">
                 <animation property="singleLineScroll" to="false"/>
-              </storyboard>
-            </text>
-            <text name="releasedateId" pos="0.9 0" size="0.1 1">
-              <text>{game:stars}</text>
-              <verticalAlignment>center</verticalAlignment>
-              <alignment>left</alignment>
-              <fontPath>./../art/fonts/Cabin-Regular.ttf</fontPath>
-              <fontSize>0.016</fontSize>
-              <fontSize ifSubset="optimizesmallscreens:yes">0.021</fontSize>
-              <color>FFCC00D0</color>
-              <multiLine>false</multiLine>
-              <autoScrollDelay>250</autoScrollDelay>
-              <storyboard event="activate">
+            </storyboard>
+        </text>
+
+        <text name="releasedateId" pos="0.9 0" size="0.1 1">
+            <text>{game:stars}</text>
+            <verticalAlignment>center</verticalAlignment>
+            <alignment>left</alignment>
+            <fontPath>./../art/fonts/Cabin-Regular.ttf</fontPath>
+            <fontSize>0.016</fontSize>
+            <fontSize ifSubset="optimizesmallscreens:yes">0.021</fontSize>
+            <color>FFCC00D0</color>
+            <multiLine>false</multiLine>
+            <autoScrollDelay>250</autoScrollDelay>
+            <storyboard event="activate">
                 <animation property="singleLineScroll" to="true"/>
-              </storyboard>
-              <storyboard event="deactivate">
+            </storyboard>
+            <storyboard event="deactivate">
                 <animation property="singleLineScroll" to="false"/>
-              </storyboard>
-            </text>
-          </container>
+            </storyboard>
+        </text>
+    </stackpanel>
+</container>
         </image>
       </itemTemplate>
     </textlist>
