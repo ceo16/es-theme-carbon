@@ -1,4 +1,4 @@
-﻿﻿<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <!--
 Theme: es-theme-carbon
 author: Fabrice CARUSO
@@ -14,7 +14,7 @@ originally based on: "simple" by nils bonenberger
       <path>./../games/${system.theme}</path>
     </gameextras>
       -->
-    <textlist name="gamelist">
+<textlist name="gamelist">
       <lines>17</lines>
       <lines ifSubset="optimizesmallscreens:yes">12</lines>
       <primaryColor>C0C0C0</primaryColor>
@@ -22,7 +22,6 @@ originally based on: "simple" by nils bonenberger
       <selectorColor>${centerFadeColor}</selectorColor>
       <selectedColor>FFFFFFFF</selectedColor>
       <extraTextColor>606060</extraTextColor>
-      <!-- extraText color is for texts located between [] or () -->
       <extraTextSelectedColor>A0A0A0</extraTextSelectedColor>
       <forceUppercase>0</forceUppercase>
       <pos>0.021 0.18</pos>
@@ -40,7 +39,56 @@ originally based on: "simple" by nils bonenberger
       <horizontalMargin>0.005</horizontalMargin>
       <glowColor>000000A0</glowColor>
       <glowSize ifArch="windows,x86,x86_64,odroidc4,odroidxu4">1</glowSize>
-    </textlist>
+
+     <itemTemplate>
+        <image name="selectionBackground">
+          <path>./../art/white.png</path>
+          <color>transparent</color>
+          <roundCorners>8</roundCorners>
+          <storyboard event="activate">
+            <animation property="color" to="${centerFadeColor}"/>
+          </storyboard>
+          <storyboard event="deactivate">
+            <animation property="color" to="transparent"/>
+          </storyboard>
+          <container>
+            <padding>4 4</padding>
+            <stackpanel orientation="horizontal" separator="12">
+
+              <image name="downloadIcon_list">
+                  <path>./../art/icons/download_overlay.svg</path>
+                  <maxSize>0.045 0.75</maxSize> 
+                  <color>FFFFFFFF</color>
+                  <visible>{game:extension} == '.download'</visible>
+				  <offset>0 0.010</offset>
+              </image>
+
+              <text name="nameId">
+                  <text>{grid:label}</text>
+                  <size>0 1</size>
+                  <extraTextColor>606060</extraTextColor>
+                  <verticalAlignment>center</verticalAlignment>
+                  <fontPath>./../art/fonts/Cabin-Regular.ttf</fontPath>
+                  <multiLine>false</multiLine>
+                  <autoScrollDelay>250</autoScrollDelay>
+                  <fontSize>0.026</fontSize>
+                  <fontSize ifSubset="optimizesmallscreens:yes">0.034</fontSize>
+                  <color>C0C0C0</color>
+                  <storyboard event="activate">
+                      <animation property="color" to="FFFFFFFF"/>
+                      <animation property="singleLineScroll" to="true"/>
+                  </storyboard>
+                  <storyboard event="deactivate">
+                      <animation property="color" to="C0C0C0"/>
+                      <animation property="singleLineScroll" to="false"/>
+                  </storyboard>
+              </text>
+              
+            </stackpanel>
+          </container>
+        </image>
+      </itemTemplate>
+      </textlist>
     <video name="md_video">
       <pos>0.76 0.408</pos>
       <maxSize>0.46 0.436</maxSize>
@@ -249,3 +297,4 @@ originally based on: "simple" by nils bonenberger
     </image>-->
   </view>
 </theme>
+
