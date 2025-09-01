@@ -83,6 +83,7 @@
       <origin>0.5 0.5</origin>
       <horizontalAlignment>right</horizontalAlignment>
       <color>FFFF00A0</color>
+        </image>
     <image name="gridtile.favorite">
       <path>./art/favorite.png</path>
       <pos>0.93 0.07</pos>
