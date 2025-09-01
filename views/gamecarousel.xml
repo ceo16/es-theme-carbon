@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <theme>
   <!--
   Theme: es-theme-carbon
@@ -198,15 +198,15 @@
       <size>0 0.033</size>
       <format>${dateFormat}</format>
     </datetime>
-    <text name="md_description">
-      <pos>0.55 0.7</pos>
-      <size>0.43 0.16</size>
-      <color>C0C0C0</color>
-      <forceUppercase>0</forceUppercase>
-      <fontPath>./art/fonts/Cabin-Regular.ttf</fontPath>
-      <fontSize>0.023</fontSize>
-      <glowColor>000000A0</glowColor>
-      <glowSize>1</glowSize>
+      <text name="md_description">
+        <pos>0.55 0.7</pos>
+        <size>0.43 0.16</size>
+        <color>C0C0C0</color>
+        <forceUppercase>0</forceUppercase>
+        <fontPath>./art/fonts/Cabin-Regular.ttf</fontPath>
+        <fontSize>0.023</fontSize>
+        <glowColor>000000A0</glowColor>
+        <glowSize>1</glowSize>
     </text>
     <image name="md_hidden">
       <path>./art/hidden.svg</path>
@@ -224,6 +224,15 @@
       <color>969696</color>
       <zIndex>150</zIndex>
     </image>
+<image name="md_download_icon" extra="true">
+      <path>./../art/icons/download_overlay.svg</path>
+      <pos>0.04 0.20</pos>
+      <maxSize>0.05 0.06</maxSize>
+      <origin>0.5 0.5</origin>
+      <color>FFFFFFFF</color>
+      <zIndex>200</zIndex>
+      <visible>{game:extension} == '.download'</visible>
+    </image>
     <image name="md_manual">
       <path>./art/manual.svg</path>
       <pos>0.882 0.9</pos>
@@ -232,5 +241,5 @@
       <color>969696</color>
       <zIndex>150</zIndex>
     </image>
-  </view>
+    </view>
 </theme>
