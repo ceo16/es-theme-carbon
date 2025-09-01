@@ -212,6 +212,15 @@
     <image name="md_nomanual">
       <color>80808040</color>
     </image>
+	<image name="md_download_icon" extra="true">
+      <path>./../art/icons/download_carosel.svg</path>
+      <pos>0.976 0.62</pos>
+      <maxSize>0.02 0.03</maxSize>
+      <origin>0.5 0.5</origin>
+      <color>dddddd</color>
+      <zIndex>100</zIndex>
+      <visible>{game:extension} == '.download'</visible>
+    </image>
     <image name="md_cheevos,md_notcheevos">
       <origin>0.5 0.5</origin>
       <path>./../art/icons/Contest.png</path>
