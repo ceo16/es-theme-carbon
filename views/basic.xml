@@ -82,7 +82,7 @@ originally based on: "simple" by nils bonenberger
     <padding>6 0</padding>
 
     <image name="downloadIcon_list">
-        <path>./../art/icons/download_overlay.png</path>
+        <path>./../art/icons/download_overlay.svg</path>
         <pos>0.005 0.5</pos> <origin>0 0.5</origin>
         <maxSize>0.022 0.7</maxSize> <color>FFFFFFFF</color>
         <visible>{game:extension} == '.download'</visible>
